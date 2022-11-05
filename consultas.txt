@@ -1,0 +1,707 @@
+﻿use ecommerce
+switched to db ecommerce
+ecommerce> db.productos.insertMany([{name: 'prod1', description: 'desc1', code: 11, img: 'img1', price: 100, stock: 100},
+... {name: 'prod2', description: 'desc2', code: 22, img: 'img2', price: 200, stock: 200},
+... {name: 'prod3', description: 'desc3', code: 33, img: 'img3', price: 300, stock: 300},
+... {name: 'prod4', description: 'desc4', code: 44, img: 'img4', price: 400, stock: 400},
+... {name: 'prod5', description: 'desc5', code: 55, img: 'img5', price: 500, stock: 500},
+... {name: 'prod6', description: 'desc6', code: 66, img: 'img6', price: 600, stock: 600},
+... {name: 'prod7', description: 'desc7', code: 77, img: 'img7', price: 700, stock: 700},
+... {name: 'prod8', description: 'desc8', code: 88, img: 'img8', price: 800, stock: 800},
+... {name: 'prod9', description: 'desc9', code: 99, img: 'img9', price: 900, stock: 900},
+... {name: 'prod10', description: 'desc10', code: 101, img: 'img10', price: 1000, stock: 1000}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("6366e35f97ea7683dfd3dbce"),
+    '1': ObjectId("6366e35f97ea7683dfd3dbcf"),
+    '2': ObjectId("6366e35f97ea7683dfd3dbd0"),
+    '3': ObjectId("6366e35f97ea7683dfd3dbd1"),
+    '4': ObjectId("6366e35f97ea7683dfd3dbd2"),
+    '5': ObjectId("6366e35f97ea7683dfd3dbd3"),
+    '6': ObjectId("6366e35f97ea7683dfd3dbd4"),
+    '7': ObjectId("6366e35f97ea7683dfd3dbd5"),
+    '8': ObjectId("6366e35f97ea7683dfd3dbd6"),
+    '9': ObjectId("6366e35f97ea7683dfd3dbd7")
+  }
+}
+ecommerce> db.productos.find()
+[
+  {
+    _id: ObjectId("6366de80d71ae75f8035f868"),
+    name: 'prod1',
+    description: 'desc1',
+    code: 11,
+ecommerce> ee
+    price: 100,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366de80d71ae75f8035f869"),
+    name: 'prod2',
+    description: 'desc2',
+    code: 22,
+    img: 'img2',
+    price: 200,
+    stock: 200
+  },
+  {
+    _id: ObjectId("6366de80d71ae75f8035f86a"),
+    name: 'prod3',
+    description: 'desc3',
+    code: 33,
+    img: 'img3',
+    price: 300,
+    stock: 300
+  },
+  {
+    _id: ObjectId("6366de80d71ae75f8035f86b"),
+    name: 'prod4',
+    description: 'desc4',
+    code: 44,
+    img: 'img4',
+    price: 400,
+    stock: 400
+  },
+  {
+    _id: ObjectId("6366de80d71ae75f8035f86c"),
+    name: 'prod5',
+    description: 'desc5',
+    code: 55,
+    img: 'img5',
+    price: 500,
+    stock: 500
+  },
+  {
+    _id: ObjectId("6366e35f97ea7683dfd3dbce"),
+    name: 'prod1',
+    description: 'desc1',
+    code: 11,
+    img: 'img1',
+    price: 100,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e35f97ea7683dfd3dbcf"),
+    name: 'prod2',
+    description: 'desc2',
+    code: 22,
+    img: 'img2',
+    price: 200,
+    stock: 200
+  },
+  {
+    _id: ObjectId("6366e35f97ea7683dfd3dbd0"),
+    name: 'prod3',
+    description: 'desc3',
+    code: 33,
+    img: 'img3',
+    price: 300,
+    stock: 300
+  },
+  {
+    _id: ObjectId("6366e35f97ea7683dfd3dbd1"),
+    name: 'prod4',
+    description: 'desc4',
+    code: 44,
+    img: 'img4',
+    price: 400,
+    stock: 400
+  },
+  {
+    _id: ObjectId("6366e35f97ea7683dfd3dbd2"),
+    name: 'prod5',
+    description: 'desc5',
+    code: 55,
+    img: 'img5',
+    price: 500,
+    stock: 500
+  },
+  {
+    _id: ObjectId("6366e35f97ea7683dfd3dbd3"),
+    name: 'prod6',
+    description: 'desc6',
+    code: 66,
+    img: 'img6',
+    price: 600,
+    stock: 600
+  },
+  {
+    _id: ObjectId("6366e35f97ea7683dfd3dbd4"),
+    name: 'prod7',
+    description: 'desc7',
+    code: 77,
+    img: 'img7',
+    price: 700,
+    stock: 700
+  },
+  {
+    _id: ObjectId("6366e35f97ea7683dfd3dbd5"),
+    name: 'prod8',
+    description: 'desc8',
+    code: 88,
+    img: 'img8',
+    price: 800,
+    stock: 800
+  },
+  {
+    _id: ObjectId("6366e35f97ea7683dfd3dbd6"),
+    name: 'prod9',
+    description: 'desc9',
+    code: 99,
+    img: 'img9',
+    price: 900,
+    stock: 900
+  },
+  {
+    _id: ObjectId("6366e35f97ea7683dfd3dbd7"),
+    name: 'prod10',
+    description: 'desc10',
+    code: 101,
+    img: 'img10',
+    price: 1000,
+    stock: 1000
+  }
+]
+ecommerce> db.mensajes.insertMany([{email: 'a@b.com', description: 'blabla', msg: 'hola', img: 'img1', date: 'date'},
+... {email: 'a@b.com', description: 'blabla', msg: 'hola', img: 'img2', date: 'date'},
+... {email: 'a@b.com', description: 'blabla', msg: 'hola', img: 'img3', date: 'date'},
+... {email: 'a@b.com', description: 'blabla', msg: 'hola', img: 'img4', date: 'date'},
+... {email: 'a@b.com', description: 'blabla', msg: 'hola', img: 'img5', date: 'date'},
+... {email: 'a@b.com', description: 'blabla', msg: 'hola', img: 'img6', date: 'date'},
+... {email: 'a@b.com', description: 'blabla', msg: 'hola', img: 'img7', date: 'date'},
+... {email: 'a@b.com', description: 'blabla', msg: 'hola', img: 'img8', date: 'date'},
+... {email: 'a@b.com', description: 'blabla', msg: 'hola', img: 'img9', date: 'date'},
+... {email: 'a@b.com', description: 'blabla', msg: 'hola', img: 'img10', date: 'date'}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("6366e47097ea7683dfd3dbd8"),
+    '1': ObjectId("6366e47097ea7683dfd3dbd9"),
+    '2': ObjectId("6366e47097ea7683dfd3dbda"),
+    '3': ObjectId("6366e47097ea7683dfd3dbdb"),
+    '4': ObjectId("6366e47097ea7683dfd3dbdc"),
+    '5': ObjectId("6366e47097ea7683dfd3dbdd"),
+    '6': ObjectId("6366e47097ea7683dfd3dbde"),
+    '7': ObjectId("6366e47097ea7683dfd3dbdf"),
+    '8': ObjectId("6366e47097ea7683dfd3dbe0"),
+    '9': ObjectId("6366e47097ea7683dfd3dbe1")
+  }
+}
+ecommerce> db.mensajes.find()
+[
+  {
+    _id: ObjectId("6366e47097ea7683dfd3dbd8"),
+    email: 'a@b.com',
+    description: 'blabla',
+    msg: 'hola',
+    img: 'img1',
+    date: 'date'
+  },
+  {
+    _id: ObjectId("6366e47097ea7683dfd3dbd9"),
+    email: 'a@b.com',
+    description: 'blabla',
+    msg: 'hola',
+    img: 'img2',
+    date: 'date'
+  },
+  {
+    _id: ObjectId("6366e47097ea7683dfd3dbda"),
+    email: 'a@b.com',
+    description: 'blabla',
+    msg: 'hola',
+    img: 'img3',
+    date: 'date'
+  },
+  {
+    _id: ObjectId("6366e47097ea7683dfd3dbdb"),
+    email: 'a@b.com',
+    description: 'blabla',
+    msg: 'hola',
+    img: 'img4',
+    date: 'date'
+  },
+  {
+    _id: ObjectId("6366e47097ea7683dfd3dbdc"),
+    email: 'a@b.com',
+    description: 'blabla',
+    msg: 'hola',
+    img: 'img5',
+    date: 'date'
+  },
+  {
+    _id: ObjectId("6366e47097ea7683dfd3dbdd"),
+    email: 'a@b.com',
+    description: 'blabla',
+    msg: 'hola',
+    img: 'img6',
+    date: 'date'
+  },
+  {
+    _id: ObjectId("6366e47097ea7683dfd3dbde"),
+    email: 'a@b.com',
+    description: 'blabla',
+    msg: 'hola',
+    img: 'img7',
+    date: 'date'
+  },
+  {
+    _id: ObjectId("6366e47097ea7683dfd3dbdf"),
+    email: 'a@b.com',
+    description: 'blabla',
+    msg: 'hola',
+    img: 'img8',
+    date: 'date'
+  },
+  {
+    _id: ObjectId("6366e47097ea7683dfd3dbe0"),
+    email: 'a@b.com',
+    description: 'blabla',
+    msg: 'hola',
+    img: 'img9',
+    date: 'date'
+  },
+  {
+    _id: ObjectId("6366e47097ea7683dfd3dbe1"),
+    email: 'a@b.com',
+    description: 'blabla',
+    msg: 'hola',
+    img: 'img10',
+    date: 'date'
+  }
+]
+ecommerce> db.productos.estimatedDocumentCount()
+15
+ecommerce> db.mensajes.estimatedDocumentCount()
+10
+ecommerce> db.productos.drop()
+true
+ecommerce> db.productos.estimatedDocumentCount()
+0
+ecommerce> db.productos.insertMany([{ name: 'prod1', description: 'desc1', code: 11, img: 'img1', price: 100, stock: 100 }, { name: 'prod2', description: 'desc2', code: 22, img: 'img2', price: 200, stock: 200 }, { name: 'prod3', description: 'desc3', code: 33, img: 'img3', price: 300, stock: 300 }, { name: 'prod4', description: 'desc4', code: 44, img: 'img4', price: 400, stock: 400 }, { name: 'prod5', description: 'desc5', code: 55, img: 'img5', price: 500, stock: 500 }, { name: 'prod6', description: 'desc6', code: 66, img: 'img6', price: 600, stock: 600 }, { name: 'prod7', description: 'desc7', code: 77, img: 'img7', price: 700, stock: 700 }, { name: 'prod8', description: 'desc8', code: 88, img: 'img8', price: 800, stock: 800 }, { name: 'prod9', description: 'desc9', code: 99, img: 'img9', price: 900, stock: 900 }, { name: 'prod10', description: 'desc10', code: 101, img: 'img10', price: 1000, stock: 1000 }])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("6366e53897ea7683dfd3dbe2"),
+    '1': ObjectId("6366e53897ea7683dfd3dbe3"),
+    '2': ObjectId("6366e53897ea7683dfd3dbe4"),
+    '3': ObjectId("6366e53897ea7683dfd3dbe5"),
+    '4': ObjectId("6366e53897ea7683dfd3dbe6"),
+    '5': ObjectId("6366e53897ea7683dfd3dbe7"),
+    '6': ObjectId("6366e53897ea7683dfd3dbe8"),
+    '7': ObjectId("6366e53897ea7683dfd3dbe9"),
+    '8': ObjectId("6366e53897ea7683dfd3dbea"),
+    '9': ObjectId("6366e53897ea7683dfd3dbeb")
+  }
+}
+ecommerce> db.productos.estimatedDocumentCount()
+10
+ecommerce> db.productos.insertOne({name: 'prod11', description: 'desc11', code: 66, img: 'img11', price: 120, stock: 1111})
+{
+  acknowledged: true,
+  insertedId: ObjectId("6366e5b197ea7683dfd3dbec")
+}
+ecommerce> db.productos.find({name:'prod5'})
+[
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe6"),
+    name: 'prod5',
+    description: 'desc5',
+    code: 55,
+    img: 'img5',
+ecommerce>
+    stock: 500
+  }
+]
+ecommerce> db.productos.find({price: {$lt:1000} })
+[
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe2"),
+    name: 'prod1',
+    description: 'desc1',
+    code: 11,
+    img: 'img1',
+    price: 100,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe3"),
+    name: 'prod2',
+    description: 'desc2',
+    code: 22,
+    img: 'img2',
+    price: 200,
+    stock: 200
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe4"),
+    name: 'prod3',
+    description: 'desc3',
+    code: 33,
+    img: 'img3',
+    price: 300,
+    stock: 300
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe5"),
+    name: 'prod4',
+    description: 'desc4',
+    code: 44,
+    img: 'img4',
+    price: 400,
+    stock: 400
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe6"),
+    name: 'prod5',
+    description: 'desc5',
+    code: 55,
+    img: 'img5',
+    price: 500,
+    stock: 500
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe7"),
+    name: 'prod6',
+    description: 'desc6',
+    code: 66,
+    img: 'img6',
+    price: 600,
+    stock: 600
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe8"),
+    name: 'prod7',
+    description: 'desc7',
+    code: 77,
+    img: 'img7',
+    price: 700,
+    stock: 700
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe9"),
+    name: 'prod8',
+    description: 'desc8',
+    code: 88,
+    img: 'img8',
+    price: 800,
+    stock: 800
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbea"),
+    name: 'prod9',
+    description: 'desc9',
+    code: 99,
+    img: 'img9',
+    price: 900,
+    stock: 900
+  },
+  {
+    _id: ObjectId("6366e5b197ea7683dfd3dbec"),
+    name: 'prod11',
+    description: 'desc11',
+    code: 66,
+    img: 'img11',
+    price: 120,
+    stock: 1111
+  }
+]
+ecommerce> db.productos.find({$and: [{price: {$gte: 1000}}, {price: {$lte{3000}}]})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:62)
+
+
+> 1 | db.productos.find({$and: [{price: {$gte: 1000}}, {price: {$lte{3000}}]})
+    |                                                               ^
+  2 |
+
+
+ecommerce> db.productos.find({$and: [{price: {$gte: 1000}}, {price: {$lte:{3000}}]})
+Uncaught:
+SyntaxError: Unexpected token (1:68)
+
+
+> 1 | db.productos.find({$and: [{price: {$gte: 1000}}, {price: {$lte:{3000}}]})
+    |                                                                     ^
+  2 |
+
+
+ecommerce> db.productos.find({$and: [{price: {$gte: 1000}}, {price: {$lte:{3000}}]})
+Uncaught:
+SyntaxError: Unexpected token (1:68)
+
+
+> 1 | db.productos.find({$and: [{price: {$gte: 1000}}, {price: {$lte:{3000}}]})
+    |                                                                     ^
+  2 |
+
+
+ecommerce> db.productos.find({$and: [{price: {$gte: 1000}}, {price: {$lte: 3000}}]})
+[
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbeb"),
+    name: 'prod10',
+    description: 'desc10',
+    code: 101,
+    img: 'img10',
+    price: 1000,
+    stock: 1000
+  }
+]
+ecommerce> db.productos.find({price: {$gte: 3000}})
+
+
+ecommerce> db.productos.find().sort({price: 1}).limit(1).skip(3)
+[
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe4"),
+    name: 'prod3',
+    description: 'desc3',
+    code: 33,
+    img: 'img3',
+    price: 300,
+    stock: 300
+  }
+]
+ecommerce> db.productos.updateMany({}, {$set: {stock: 100}}, {upsert: true})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 11,
+  modifiedCount: 10,
+  upsertedCount: 0
+}
+ecommerce> db.productos.find()
+[
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe2"),
+    name: 'prod1',
+    description: 'desc1',
+    code: 11,
+    img: 'img1',
+    price: 100,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe3"),
+    name: 'prod2',
+    description: 'desc2',
+    code: 22,
+    img: 'img2',
+    price: 200,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe4"),
+    name: 'prod3',
+    description: 'desc3',
+    code: 33,
+    img: 'img3',
+    price: 300,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe5"),
+    name: 'prod4',
+    description: 'desc4',
+    code: 44,
+    img: 'img4',
+    price: 400,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe6"),
+    name: 'prod5',
+    description: 'desc5',
+    code: 55,
+    img: 'img5',
+    price: 500,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe7"),
+    name: 'prod6',
+    description: 'desc6',
+    code: 66,
+    img: 'img6',
+    price: 600,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe8"),
+    name: 'prod7',
+    description: 'desc7',
+    code: 77,
+    img: 'img7',
+    price: 700,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe9"),
+    name: 'prod8',
+    description: 'desc8',
+    code: 88,
+    img: 'img8',
+    price: 800,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbea"),
+    name: 'prod9',
+    description: 'desc9',
+    code: 99,
+    img: 'img9',
+    price: 900,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbeb"),
+    name: 'prod10',
+    description: 'desc10',
+    code: 101,
+    img: 'img10',
+    price: 1000,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e5b197ea7683dfd3dbec"),
+    name: 'prod11',
+    description: 'desc11',
+    code: 66,
+    img: 'img11',
+    price: 120,
+    stock: 100
+  }
+]
+ecommerce> db.productos.updateMany({price: {$gt: 4000}}, {$set: {stock: 0}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ecommerce> db.productos.find()
+[
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe2"),
+    name: 'prod1',
+    description: 'desc1',
+    code: 11,
+    img: 'img1',
+    price: 100,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe3"),
+    name: 'prod2',
+    description: 'desc2',
+    code: 22,
+    img: 'img2',
+    price: 200,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe4"),
+    name: 'prod3',
+    description: 'desc3',
+    code: 33,
+    img: 'img3',
+    price: 300,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe5"),
+    name: 'prod4',
+    description: 'desc4',
+    code: 44,
+    img: 'img4',
+    price: 400,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe6"),
+    name: 'prod5',
+    description: 'desc5',
+    code: 55,
+    img: 'img5',
+    price: 500,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe7"),
+    name: 'prod6',
+    description: 'desc6',
+    code: 66,
+    img: 'img6',
+    price: 600,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe8"),
+    name: 'prod7',
+    description: 'desc7',
+    code: 77,
+    img: 'img7',
+    price: 700,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbe9"),
+    name: 'prod8',
+    description: 'desc8',
+    code: 88,
+    img: 'img8',
+    price: 800,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbea"),
+    name: 'prod9',
+    description: 'desc9',
+    code: 99,
+    img: 'img9',
+    price: 900,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbeb"),
+    name: 'prod10',
+    description: 'desc10',
+    code: 101,
+    img: 'img10',
+    price: 1000,
+    stock: 100
+  },
+  {
+    _id: ObjectId("6366e5b197ea7683dfd3dbec"),
+    name: 'prod11',
+    description: 'desc11',
+    code: 66,
+    img: 'img11',
+    price: 120,
+    stock: 100
+  }
+]
+ecommerce> db.deleteMany({price: {$lt: 1000}})
+TypeError: db.deleteMany is not a function
+ecommerce> db.productos.deleteMany({price: {$lt: 1000}})
+{ acknowledged: true, deletedCount: 10 }
+ecommerce> db.productos.find()
+[
+  {
+    _id: ObjectId("6366e53897ea7683dfd3dbeb"),
+    name: 'prod10',
+    description: 'desc10',
+    code: 101,
+    img: 'img10',
+    price: 1000,
+    stock: 100
+  }
+]
+ecommerce> db.createUser({user: "pepe", psw: "asd456", roles: [{role:'read', db:'ecommerce'}]})
+MongoshInvalidInputError: [COMMON-10001] Missing required property: "pwd"
+ecommerce> db.createUser({user: 'pepe', pwd: 'asd456', roles: [{role: 'read', db: 'ecommerce'}]})
+{ ok: 1 }
+ecommerce>
